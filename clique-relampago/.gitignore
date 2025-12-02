@@ -3,7 +3,7 @@
 Thumbs.db
 desktop.ini
 
-# Arquivos de editor
+# IDEs
 .vscode/
 .idea/
 *.swp
@@ -17,11 +17,4 @@ npm-debug.log*
 # Arquivos temporários
 *.tmp
 *.temp
-
-# Node modules (se adicionar no futuro)
-node_modules/
-
-# Arquivos de ambiente (se usar)
-.env
-.env.local
 

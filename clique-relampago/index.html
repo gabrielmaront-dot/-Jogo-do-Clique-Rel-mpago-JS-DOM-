@@ -3,20 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clique Relâmpago</title>
+    <title>⚡ Clique Relâmpago ⚡</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Modal de Identificação -->
-    <div id="playerModal" class="modal">
-        <div class="modal-content">
-            <h2>🎮 Identifique-se</h2>
-            <p>Digite seu nome para participar do ranking:</p>
-            <input type="text" id="playerNameInput" placeholder="Seu nome" maxlength="20" autocomplete="off">
-            <button id="savePlayerBtn" class="modal-btn">Continuar</button>
-        </div>
-    </div>
-
     <div class="game-container">
         <div class="header-actions">
             <h1>⚡ Clique Relâmpago ⚡</h1>
@@ -25,71 +15,39 @@
         
         <div class="player-info">
             <span>Jogador: <strong id="currentPlayer">-</strong></span>
-            <span class="player-record">🏅 Recorde: <strong id="personalRecord">0</strong></span>
         </div>
         
-        <div class="level-info">
-            <span class="level-badge" id="levelBadge">Nível 1</span>
-            <span class="level-description" id="levelDescription">Iniciante</span>
+        <!-- Phase Info -->
+        <div id="phaseInfo" class="phase-info hidden">
+            <div class="phase-title">Fase <span id="phaseNumber">1</span></div>
+            <div class="region-name" id="regionName">Cidade Eclipse</div>
+            <div class="phase-progress">
+                <div class="progress-bar">
+                    <div class="progress-fill" id="phaseProgress"></div>
+                </div>
+                <span id="progressText">0 / 10</span>
+            </div>
         </div>
-        
+
         <div class="info-bar">
             <span class="label">Tempo:</span>
             <span id="time-left" class="timer">10</span>
             <span class="label">Pontuação:</span>
             <span id="score" class="score">0</span>
-            <span class="label">Meta:</span>
-            <span id="targetScore" class="target-score">10</span>
         </div>
         
         <button id="startBtn" class="start-btn">Iniciar</button>
         
         <div id="gameArea" class="game-area">
-            <div id="target" class="target"></div>
-        </div>
-        
-        <div id="gameOver" class="game-over hidden">
-            <h2>Fim de Jogo!</h2>
-            <p>Sua pontuação final:</p>
-            <p class="final-score" id="finalScore">0</p>
-            <div id="newRecord" class="new-record hidden">🎉 NOVO RECORDE PESSOAL! 🎉</div>
-            <div id="levelUp" class="level-up hidden">⬆️ SUBIU DE NÍVEL! ⬆️</div>
-            <div id="achievement" class="achievement hidden"></div>
-            <div id="savingScore" class="saving-message hidden">Salvando pontuação...</div>
-            <div id="scoreSaved" class="success-message hidden">✅ Pontuação salva no ranking!</div>
-            <div class="game-stats">
-                <p>Recorde Pessoal: <strong id="finalRecord">0</strong></p>
-                <p>Nível Atual: <strong id="finalLevel">1</strong></p>
-            </div>
-            <button id="restartBtn" class="restart-btn">Jogar Novamente</button>
+            <!-- Núcleos de energia aparecerão aqui dinamicamente -->
         </div>
     </div>
 
-    <!-- Modal de Ranking -->
-    <div id="rankingModal" class="modal hidden">
-        <div class="modal-content ranking-content">
-            <div class="modal-header">
-                <h2>🏆 Ranking Global</h2>
-                <button id="closeRankingBtn" class="close-btn" title="Fechar">×</button>
-            </div>
-            <div id="rankingLoading" class="loading">Carregando ranking...</div>
-            <div id="rankingList" class="ranking-list"></div>
-            <div id="playerPosition" class="player-position hidden"></div>
-            <div class="modal-footer">
-                <button id="closeRankingBtn2" class="modal-btn-secondary">Fechar Ranking</button>
-                <button id="restartFromRankingBtn" class="modal-btn-primary">🔄 Jogar Novamente</button>
-            </div>
-        </div>
-    </div>
-    
-    <!-- Biblioteca Supabase -->
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js" 
-            onerror="console.error('❌ Erro ao carregar biblioteca Supabase do CDN')"
-            onload="console.log('✅ Biblioteca Supabase carregada do CDN')"></script>
-    <!-- Configuração do Supabase -->
-    <script src="supabase-config.js"></script>
-    <!-- Script principal -->
-    <script src="script.js"></script>
+    <!-- Scripts -->
+    <script src="src/ui/StorySystem.js"></script>
+    <script src="src/engine/PhaseManager.js"></script>
+    <script src="src/engine/GameEngine.js"></script>
+    <script src="src/main.js"></script>
 </body>
 </html>
 

@@ -1,93 +1,77 @@
-# ⚡ Clique Relâmpago ⚡
+# ⚡ Relâmpago: A Ascensão do Portador ⚡
 
-Um jogo de agilidade e precisão onde você precisa clicar no alvo o máximo de vezes possível em 10 segundos!
+Um jogo épico de ação, reflexo e precisão onde você é **KOHR, o Portador do Raio**, enfrentando 30 guardiões corrompidos através de 6 regiões dominadas pela Tempestade Suprema!
 
-## 🎮 Como Jogar
+## 🎮 História
 
-1. Digite seu nome quando solicitado
-2. Clique em "Iniciar"
-3. Clique no alvo 🎯 o mais rápido possível
-4. O alvo se move para uma posição aleatória a cada clique
-5. Tente bater seu recorde pessoal!
+O mundo foi tomado pela **Tempestade Suprema**, uma entidade de energia viva que corrompeu todo o fluxo elétrico do planeta. Você é **KOHR, o Portador do Raio**, e precisa atravessar 30 zonas dominadas e derrotar os 30 guardiões corrompidos (1 por fase) para restaurar o equilíbrio energético do mundo.
 
-## 🏆 Recursos
+## 🌍 Estrutura do Jogo
 
-- ⏱️ Cronômetro regressivo de 10 segundos
-- 🎯 Alvo que se move aleatoriamente
-- 📊 Ranking global compartilhado (Supabase)
-- 🏅 Sistema de níveis (10 níveis)
-- 📈 Recorde pessoal
-- 🎖️ Conquistas e badges
-- 📱 Totalmente responsivo
+### 6 Regiões, 30 Fases, 30 Bosses
 
-## 🚀 Jogar Online
+- **REGIÃO 1 — Cidade Eclipse** (Fases 1-5)
+- **REGIÃO 2 — Selva Estática** (Fases 6-10)
+- **REGIÃO 3 — Tundra Polarizada** (Fases 11-15)
+- **REGIÃO 4 — Vulcão Tesla** (Fases 16-20)
+- **REGIÃO 5 — Fábrica Omega** (Fases 21-25)
+- **REGIÃO 6 — Olho da Tempestade** (Fases 26-30)
 
-Acesse: [https://gabrielmaront-dot.github.io/clique-relampago/](https://gabrielmaront-dot.github.io/clique-relampago/)
-
-## 🔧 Tecnologias Utilizadas
-
-- **HTML5** - Estrutura
-- **CSS3** - Estilização e animações
-- **JavaScript (Vanilla)** - Lógica do jogo
-- **Supabase** - Backend para ranking global
-
-## 🎯 Sistema de Níveis
-
-- **Nível 1**: Iniciante (0+ pontos)
-- **Nível 2**: Novato (10+ pontos)
-- **Nível 3**: Aprendiz (20+ pontos)
-- **Nível 4**: Intermediário (35+ pontos)
-- **Nível 5**: Avançado (50+ pontos)
-- **Nível 6**: Expert (70+ pontos)
-- **Nível 7**: Mestre (100+ pontos)
-- **Nível 8**: Lendário (150+ pontos)
-- **Nível 9**: Épico (200+ pontos)
-- **Nível 10**: LENDÁRIO SUPREMO (300+ pontos)
-
-## 📝 Estrutura do Projeto
+## 📁 Estrutura do Projeto
 
 ```
 clique-relampago/
-├── index.html          # Página principal
-├── style.css           # Estilos do jogo
-├── script.js           # Lógica do jogo
-├── supabase-config.js  # Configuração do Supabase
-├── CONFIGURACAO.md     # Guia de configuração do Supabase
-└── README.md           # Este arquivo
+├── index.html                    # Página principal
+├── style.css                     # Estilos do jogo
+├── src/
+│   ├── main.js                   # Ponto de entrada principal
+│   ├── engine/
+│   │   ├── GameEngine.js         # Motor principal do jogo
+│   │   └── PhaseManager.js       # Gerenciador de fases
+│   └── ui/
+│       └── StorySystem.js        # Sistema de narrativa completo
+└── README.md                     # Este arquivo
 ```
 
-## 🔐 Configuração do Supabase
+## 🎯 Recursos Implementados
 
-Para o ranking funcionar, você precisa configurar o Supabase. Veja o arquivo `CONFIGURACAO.md` para instruções detalhadas.
+### Sistema de Narrativa
+- ✅ **Cutscenes entre regiões** - Aparecem quando você entra em uma nova região
+- ✅ **Diálogos dos bosses** - Cada boss tem um diálogo antes da batalha
+- ✅ **Sistema de Lore** - Colete entradas de lore ao completar regiões
+- ✅ **Tela de História** - Botão "📖 História" no menu para ver a história completa
 
-## 📱 Responsivo
+### Integrações
+- ✅ Cutscenes automáticas ao iniciar nova região
+- ✅ Diálogos automáticos antes de cada boss
+- ✅ Lore coletada automaticamente ao completar regiões
+- ✅ Lore de conclusão ao completar o jogo
 
-O jogo é totalmente responsivo e funciona em:
-- 💻 Desktop
-- 📱 Tablets
-- 📱 Smartphones
+## 🚀 Como Usar
 
-## 🐛 Solução de Problemas
+1. Abra `index.html` no navegador
+2. Clique em "Iniciar" para começar
+3. As cutscenes aparecerão automaticamente ao entrar em novas regiões
+4. Os diálogos dos bosses aparecerão antes de cada batalha
+5. Clique no botão "📖 História" para ver a história completa e lore coletada
 
-### O ranking não carrega
-- Verifique se executou os scripts SQL no Supabase
-- Verifique se as credenciais estão corretas no `supabase-config.js`
-- Abra o Console (F12) para ver erros detalhados
+## 🔧 Tecnologias
 
-### O jogo não aparece completo
-- Verifique se está usando um navegador moderno
-- Limpe o cache (Ctrl+F5)
-- Verifique a responsividade da tela
+- **HTML5** - Estrutura
+- **CSS3** - Estilização
+- **JavaScript (Vanilla)** - Lógica do jogo
 
-## 📄 Licença
+## 📝 Próximos Passos
 
-Este projeto é de código aberto e está disponível para uso livre.
-
-## 👨‍💻 Autor
-
-Desenvolvido por Gabriel Maron como projeto de aprendizado de JavaScript e DOM.
+Para completar o jogo, você precisará implementar:
+- Sistema de alvos e cliques
+- Sistema de combos
+- Sistema de pontuação
+- Lógica dos bosses
+- Sistema de power-ups
+- Efeitos visuais e partículas
 
 ---
 
-**Divirta-se jogando! 🎮⚡**
+**Desenvolvido com ⚡ para contar a história de KOHR, o Portador do Raio**
 
