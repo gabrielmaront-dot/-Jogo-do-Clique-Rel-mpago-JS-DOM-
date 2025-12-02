@@ -1,1 +1,0 @@
-# -Jogo-do-Clique-Rel-mpago-JS-DOM-
